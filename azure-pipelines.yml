@@ -14,7 +14,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean package'
-    options: '-DforkCount=1 -DargLine="-Xmx1024m -Xms512m"'
+    options: '-DforkCount=0 -DargLine="-Xmx1024m -Xms512m"'
 
 - task: Docker@2
   inputs:
