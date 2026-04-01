@@ -16,7 +16,7 @@ steps:
     goals: 'clean package'
     options: '-DforkCount=1 -DargLine="-Xmx1024m -Xms512m"'  # Custom JVM memory settings
     javaHomeOption: 'JDKVersion'             # Use installed JDK on agent
-    jdkVersionOption: '1.17'
+    jdkVersionOption: '17.0.14'
 
 - task: Docker@2
   inputs:
