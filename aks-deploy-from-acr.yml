@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-spring-boot
-        image: niviacr.azurecr.io/spring-boot:#{Build.BuildId}#
+        image: niviacr.azurecr.io/spring-boot:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
