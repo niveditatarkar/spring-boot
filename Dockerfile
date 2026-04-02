@@ -1,5 +1,5 @@
 # Use lightweight Java runtime
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 # Set working directory
 WORKDIR /spring-boot-docker-demp
