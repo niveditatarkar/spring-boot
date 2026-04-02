@@ -26,3 +26,15 @@ steps:
     tags: |
       $(Build.BuildId)
       latest
+
+- task: Kubernetes@1
+  displayName: 'Apply Kubernetes YAML'
+  inputs:
+    connectionType: 'Azure Resource Manager'
+    azureSubscriptionEndpoint: 'nivi-aks-service-connection'
+    azureResourceGroup: 'nivi-resource-group'
+    kubernetesCluster: 'nivi-aks-cluster'
+    namespace: 'default'
+    command: 'apply'
+    useConfigurationFile: true
+    configuration: 'aks-deploy-from-acr.yml'
